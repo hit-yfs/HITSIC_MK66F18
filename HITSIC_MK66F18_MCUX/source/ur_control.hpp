@@ -13,7 +13,7 @@
 
 #define CTRL_ANG_CTRL_MS    (5U)
 #define CTRL_SPD_CTRL_MS    (100U)
-#define CTRL_DIR_CTRL_MS    (5U)
+#define CTRL_DIR_CTRL_MS    (20U)
 
 #define CTRL_1G             (9.80f)
 //#define CTRL_ASIN(x)        (arm_arcsin_f32(x))
@@ -78,7 +78,7 @@ extern int32_t ctrl_dirCtrlEn[3];
 extern pidCtrl_t ctrl_dirPid;
 extern float ctrl_dirPidOutput;
 
-void CTRL_DirCtrl(void *userData);
+void CTRL_DirCtrl(float *err);
 
 /* *********************************************** */
 
